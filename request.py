@@ -32,6 +32,7 @@ def update(event):
 				version[2] += 1
 			version = [str(i) for i in version]
 			version = '.'.join(version)
+			sg.popup(version)
 			content[line_index] = line[:-ver_length-1] + version + "\n"
 	with open("data.db","w") as database:
 		for line in content:
